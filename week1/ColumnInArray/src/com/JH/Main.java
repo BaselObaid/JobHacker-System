@@ -1,5 +1,7 @@
 package com.JH;
-
+/*
+ *@BaselObaid
+ */
 import java.util.Scanner;
 
 public class Main {
