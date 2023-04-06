@@ -10,27 +10,26 @@ public class Main {
 
         double [][] matrix = new double[12][12];
         int columnNumber;
-        String sum = "S", average = "M", type;
+        char sum = 'S', average = 'M', type;
 
         Scanner input = new Scanner(System.in);
         columnNumber = input.nextInt();
-        type = input.next();
-        fullMatrix(matrix);
+        type = input.next().charAt(0);
+        fullMatrix(matrix,input);
 
-        if (type.equals(sum)){
+        if (type==sum){
             System.out.printf("%.1f\n",calculateSum(matrix,columnNumber));
         }
-        else if(type.equals(average)){
+        else if(type==average){
             System.out.printf("%.1f\n",calculateAvg(matrix,calculateSum(matrix,columnNumber)));
         }
 
     }
 
-    public static void fullMatrix(double [][] matrix){
-        Scanner input = new Scanner(System.in);
+    public static void fullMatrix(double [][] matrix, Scanner input){
         for(int i = 0; i < matrix.length; i++){
             for (int j = 0; j < matrix.length; j++) {
-                matrix[i][j]= input.nextInt();
+                matrix[i][j]= input.nextDouble();
             }
         }
     }

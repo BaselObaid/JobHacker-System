@@ -6,55 +6,57 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static final char SUM_OPERATION = 'S';
+    public static final char AVERAGE_OPERATION = 'M';
+    public static final int MATRIX_SIZE = 12;
 
-        double [][] matrix = new double[4][4];
-        String sum = "S", average = "M", type;
 
-        Scanner input = new Scanner(System.in);
-        type = input.next();
-        fullMatrix(matrix);
-        
-        if (type.equals(sum)){
-            System.out.printf("%.1f\n",calculateSum(matrix));
-        }
-        else if(type.equals(average)){
-            System.out.printf("%.1f\n",calculateAvg(matrix));
-        }
 
-    }
+        public static void main(String[] args) {
 
-    // to full a matrix by elements
-    public static void fullMatrix(double [][] matrix){
-        Scanner input = new Scanner(System.in);
-        for(int i = 0; i < matrix.length; i++){
-            for (int j = 0; j < matrix.length; j++) {
-                matrix[i][j]= input.nextInt();
+            char calculationType;
+            Scanner input = new Scanner(System.in);
+            calculationType = input.next().charAt(0);
+            double[][] matrix = new double[MATRIX_SIZE][MATRIX_SIZE];
+            fullMatrix(matrix, input);
+
+            if (calculationType == SUM_OPERATION) {
+                System.out.printf("%.1f\n", calculateSum(matrix));
+            } else if (calculationType == AVERAGE_OPERATION) {
+                System.out.printf("%.1f\n", calculateAvg(matrix));
+            } else {
+                System.out.println("Invalid operation specified");
             }
         }
-    }
 
-
-    public static double calculateSum(double [][] matrix){
-        double sum = 0;
-        for (int i = 1; i < matrix.length; i++) {
-            for (int j = 0; j < i; j++) {
-                sum += matrix[i][j];
+// to fill a matrix by elements
+        public static void fullMatrix(double[][] matrix, Scanner input) {
+            for (int i = 0; i < matrix.length; i++) {
+                for (int j = 0; j < matrix[i].length; j++) {
+                    matrix[i][j] = input.nextDouble();
+                }
             }
         }
-        return sum;
-    }
 
-    public static double calculateAvg(double [][]matrix){
-        double avg = 0, sum = 0;
-        int count = 0;
-        for (int i = 1; i < matrix.length; i++) {
-            for (int j = 0; j < i; j++) {
-                sum += matrix[i][j];
-                count++;
+        public static double calculateSum(double[][] matrix) {
+            double sum = 0;
+            for (int i = 1; i < matrix.length; i++) {
+                for (int j = 0; j < i; j++) {
+                    sum += matrix[i][j];
+                }
             }
+            return sum;
         }
-        avg = sum / count;
-        return avg;
+
+        public static double calculateAvg(double[][] matrix) {
+            double sum = 0;
+            int count = (MATRIX_SIZE * (MATRIX_SIZE - 1)) / 2;
+            for (int i = 1; i < matrix.length; i++) {
+                for (int j = 0; j < i; j++) {
+                    sum += matrix[i][j];
+                }
+            }
+            return sum / count;
+        }
+
     }
-}
