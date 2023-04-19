@@ -1,0 +1,217 @@
+
+1- ADD NEW BOOK.
+2- REMOVE BOOK.
+3- CHECKOUT BOOK AND GIVE IT TO USER IF AVAILABLE.
+4- RETURN BOOK.
+5- DISPLAY AVAILABLE BOOKS.
+6- DISPLAY A SPECIFIC BOOK.
+7- DISPLAY BORROWED BOOKS
+8- ENTER ANY KEY TO EXIST (not 1 to 7)
+ENTER THE OPERATION NUMBER:
+*input:any key
+
+*output:
+1-
+******{ADD NEW BOOK}******
+**Case valid data
+*input:
+enter the title:
+JobHacker-System
+enter the author name:
+JobHacker
+enter the book ID:
+123
+enter the version:
+1.01
+enter availability(true or false):
+true
+*output:
+{The Books Was Added Successfully}
+or
+{this book is already exist}
+
+
+**Case invalid data
+
+*input:
+enter the title:
+JobHacker-System
+enter the author name:
+JobHacker
+enter the book ID:
+123
+enter the version:
+1.01
+enter availability(true or false):
+yes
+Invalid input. Please enter a valid boolean (true or false).
+enter availability(true or false):
+34
+Invalid input. Please enter a valid boolean (true or false).
+enter availability(true or false):
+false
+
+*output:
+{The Books Was Added Successfully}
+or
+{this book is already exist}
+
+************************************************************************
+
+2-
+******{REMOVE BOOK}******
+**valid case
+*input:
+enter the book ID:
+2
+
+*output:
+{remove success}
+or
+{not exists book to remove}
+
+**invalid case
+enter the book ID:
+ok
+
+*output
+Invalid input. Please enter a valid integer ID.
+
+******************************************************
+
+3-
+******{CHECKOUT BOOK}******
+**valid case
+*input:
+Enter Reader Id
+2
+Enter Book Id
+1
+
+*output:
+{add Borrowed Book Successfully
+book checked out successfully}
+or
+{book not available for checkout}
+
+**invalid case1
+*input:
+Enter Reader Id
+two
+
+*output
+{Invalid input. Please enter a valid integer ID.}
+
+**invalid case2
+input:
+Enter Reader Id
+3
+Enter Book Id
+40000225556666
+
+*output
+{reader id or book id is not exit}
+
+***************************************************************
+
+4-
+******{RETURN BOOK}******
+**valid case
+*input:
+Enter Reader Id
+2
+Enter Book Id
+1
+
+*output:
+{"reader name" return this book: "book name"}
+or
+{"reader name"  did not borrow this book}
+
+
+**invalid case1
+*input:
+Enter Reader Id
+two
+
+*output
+{Invalid input. Please enter a valid integer ID.}
+
+
+**invalid case2
+input:
+Enter Reader Id
+3
+Enter Book Id
+40000225556666
+
+*output
+{reader id or book id is not exit}
+
+************************************************************
+5-
+******{DISPLAY AVAILABLE BOOKS}******
+*output:
+{
+a1 | Java1 | 1 | 1.1 | true
+***************************
+}
+
+
+************************************************************
+
+6-
+******{DISPLAY A SPECIFIC BOOK}******
+**valid case
+*input:
+enter the book ID:
+1
+
+*output:
+{
+a1 | Java1 | 1 | 1.1 | true
+***************************
+}
+
+**invalid case1
+*input:
+enter the book ID:
+fg
+
+*output:
+{Invalid input. Please enter a valid integer ID.}
+
+**invalid case2
+*input:
+enter the book ID:
+56565656656
+
+*output:
+{this book is not exist}
+
+***********************************************************
+
+7-
+******{DISPLAY BORROWED BOOKS}******
+*output:
+{
+a1 | Java1 | 1 | 1.1 | false
+***************************
+}
+
+*************************************************************
+
+8-
+ENTER ANY KEY TO EXIST (not 1 to 7)
+
+*input:
+8
+
+*output:
+{
+finish the program
+}
+
+**************************************************************
+
+
