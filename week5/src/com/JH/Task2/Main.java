@@ -13,12 +13,19 @@ public class Main {
         try{
             FileInputStream file = new FileInputStream(fileNameDirectory);
             int counter  = 0;
+            int c = 0 ;
             int i=0;
+
+
             while ((i= file.read())!=-1){
                 if((char)i == ' '|| (char)i == '\n'){
-                    counter++;
+                        counter++;
+                }
+                if((char)i =='-'){
+                    counter--;
                 }
             }
+
             System.out.println();
             System.out.println("the number of words is: " + counter);
 
