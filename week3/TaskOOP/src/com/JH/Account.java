@@ -2,7 +2,7 @@ package com.JH;
 
 public class Account {
 
-    private int accountNumber;
+    private String accountNumber;
     private String accountHolderName;
     private double balance;
 
@@ -10,7 +10,7 @@ public class Account {
 
     }
 
-    public Account(int accountNumber, String accountHolderName, double balance){
+    public Account(String accountNumber, String accountHolderName, double balance){
         this.accountNumber = accountNumber;
         this.accountHolderName = accountHolderName;
         this.balance = balance;
@@ -30,7 +30,7 @@ public class Account {
         System.out.println("$" + amount + " deposited into " + accountHolderName + ". New balance: $" + balance);
     }
 
-    public int getAccountNumber() {
+    public String getAccountNumber() {
         return accountNumber;
     }
 

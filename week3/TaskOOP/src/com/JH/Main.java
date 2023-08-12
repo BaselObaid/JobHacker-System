@@ -7,11 +7,11 @@ public class Main {
     public static void main(String[] args) {
 
         Bank bankAccounts = new Bank();
-        Account a1 = new Account(123,"a", 0);
-        Account a2 = new Account(124,"b", 0);
-        Account a3 = new Account(125,"c", 0);
-        Account a4 = new Account(126,"d", 0);
-        Account a5 = new Account(127,"e", 0);
+        Account a1 = new Account("123","a", 0);
+        Account a2 = new Account("124","b", 0);
+        Account a3 = new Account("125","c", 0);
+        Account a4 = new Account("126","d", 0);
+        Account a5 = new Account("127","e", 0);
 
         bankAccounts.addAccount(a1);
         bankAccounts.addAccount(a2);
@@ -21,7 +21,8 @@ public class Main {
 
         Scanner input = new Scanner(System.in);
         Scanner account = new Scanner(System.in);
-        int number, accountNumber;
+        int number;
+        String accountNumber;
         double amount;
         String accountName;
         while(true){
@@ -29,7 +30,7 @@ public class Main {
             System.out.println("please enter your account name:");
             accountName = account.next();
             System.out.println("please enter your account number:");
-            accountNumber = account.nextInt();
+            accountNumber = account.next();
 
             System.out.println("hello, chose a process you want");
             System.out.println("enter 1-check balance.\t 2- withdraw.\t3- deposit.");

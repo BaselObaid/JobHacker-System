@@ -13,7 +13,7 @@ public class Bank {
         accounts.add(account);
     }
 
-    public void withdraw(int accountNumber, double amount, String accountName) {
+    public void withdraw(String accountNumber, double amount, String accountName) {
         for (Account account : accounts) {
             if (account.getAccountNumber() == accountNumber && account.getAccountHolderName().equals(accountName)) {
                 account.withdrawMoney(amount);
@@ -23,7 +23,7 @@ public class Bank {
         System.out.println("Account not found.");
     }
 
-    public void deposit(int accountNumber, double amount, String accountName) {
+    public void deposit(String accountNumber, double amount, String accountName) {
         for (Account account : accounts) {
             if (account.getAccountNumber() == accountNumber && account.getAccountHolderName().equals(accountName)) {
                 account.depositMoney(amount);
@@ -33,7 +33,7 @@ public class Bank {
         System.out.println("Account not found.");
     }
 
-    public void viewBalance(int accountNumber, String accountName) {
+    public void viewBalance(String accountNumber, String accountName) {
         for (Account account : accounts) {
             if (account.getAccountNumber() == accountNumber && account.getAccountHolderName().equals(accountName)) {
                 System.out.println(account.getAccountHolderName() + " (" + account.getAccountNumber() + "): $" + account.getBalance());
