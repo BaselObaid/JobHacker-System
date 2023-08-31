@@ -1,0 +1,37 @@
+<!-- todo-list.component.html -->
+<div class="container-fluid">
+    <div class="row justify-content-center mt-5" style="height: 100vh;">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h2 class="card-title">Add Todo</h2>
+          </div>
+          <div class="card-body">
+            <input [(ngModel)]="newTodo" class="form-control mb-3" placeholder="Add Todo" />
+            <button class="btn btn-primary" (click)="addTodo()">Add</button>
+          </div>
+        </div>
+        <div class="card mt-3">
+          <div class="card-header">
+            <h2 class="card-title">Todo List</h2>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" *ngFor="let todo of todos; let i = index">
+              <div>
+                <h5 class="mb-2">{{ todo.text }}</h5>
+                <div *ngIf="!todo.editing">
+                  <button class="btn btn-sm btn-primary mr-2" (click)="editTodo(i)">Edit</button>
+                  <button class="btn btn-sm btn-danger mr-2" (click)="deleteTodo(i)">Delete</button>
+                </div>
+                <div *ngIf="todo.editing">
+                  <input [(ngModel)]="todo.text" class="form-control mb-2" />
+                  <button class="btn btn-sm btn-primary" (click)="editTodo(i)">Save</button>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
