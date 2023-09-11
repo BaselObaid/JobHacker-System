@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+
+	<title>ServletAndJsp</title>
+</head>
+	<body>
+		<div class="container mt-5">
+	        <form action="displayFactorial" method="post" class="text-center">
+				<h2 class="text-center">Factorial Table</h2>
+	            <button type="submit" class="btn btn-primary">Generate Factorial Table</button>
+	        </form>
+	        <hr>
+	        <form action="calculate-age.jsp" method="post" class="text-center mt-5">
+				<h2 class="text-center">Calculate AGE</h2>
+				<label for="birth-date">Enter Birth Date:</label>
+   				<input type="datetime-local" name="birth-date">
+				<br>
+				<label for="date">Enter Date:</label>
+				<input type="datetime-local" name="date">
+				<br>
+	            <button type="submit" class="btn btn-primary">Calculate</button>
+	        </form>
+	    </div>
+			<!-- jQuery library -->
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.min.js"></script>
+	  <script>
+	    $(document).ready(function () {
+	      $('[data-toggle="popover"]').popover();
+	    });
+	  </script>
+	  <script>
+	    $(document).ready(function () {
+	      $('[data-toggle="tooltip"]').tooltip();
+	    });
+	  </script>
+	
+	  <!-- Popper JS -->
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+	
+	  <!-- Bootstrap JavaScript -->
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.2/js/bootstrap.bundle.min.js"></script>
+	</body>
+</html>
