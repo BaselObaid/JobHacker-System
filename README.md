@@ -65,3 +65,5 @@ This is a Maven project for the User Module in an e-commerce website. The module
 
 ### 10. Main Application Class
    - `UserModuleApplication`: Main class to bootstrap the User Module application.
+# API URLs
+https://app.swaggerhub.com/apis-docs/BASELKHAMES000/user-module/v1
