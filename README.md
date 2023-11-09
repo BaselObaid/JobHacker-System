@@ -1,6 +1,6 @@
 # E-commerce User Module
 
-This is a Maven project for the User Module in an e-commerce website. The module is responsible for authenticating and authorizing users.
+This is a spring boot project for the User Module in an e-commerce website. The module is responsible for authenticating and authorizing users.
 
 ## Project Information
 
